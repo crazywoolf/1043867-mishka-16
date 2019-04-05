@@ -14,18 +14,18 @@
         <button class="main-nav__toggle" type="button">Меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a href="#">
+            <a class="site-list__link" href="#">
               <span class="item__icon item__icon--search"></span>Поиск по сайту
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
               <span class="item__icon item__icon--order"></span>Корзина: пока пуста
             </a>
           </li>
@@ -108,13 +108,13 @@
         <h3 class="reviews__title">Отзывы</h3>
         <div class="reviews__wrapper slider">
           <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item">
-              <p class="reviews__description">
+            <li class="reviews__item review slider__item">
+              <p class="review__description">
                   Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
-              <div class="reviews__autor">
-                <b class="reviews__name">Анастасия Красильникова</b>
-                <span class="reviews__contact">@misssssiskras</span>
+              <div class="review__autor">
+                <b class="review__name">Анастасия Красильникова</b>
+                <span class="review__contact">@misssssiskras</span>
               </div>
             </li>
           </ul>
@@ -129,28 +129,28 @@
 
       <section class="contacts">
         <h4 class="contacts__title">Контакты</h4>
-        <table class="contacts__list">
-          <tr>
-            <td class="contacts__faild">
+        <div class="contacts__list">
+          <div class="contacts__item contact">
+            <p class="contact__field">
               e-mail:
-            </td>
-            <td class="contacts__value">
-              <a class="contacts__email" href="mailto:info@mimimishkashop.ru">
+            </p>
+            <p class="contact__value">
+              <a class="contact__email" href="mailto:info@mimimishkashop.ru">
                 info@mimimishkashop.ru
               </a>
-            </td>
-          </tr>
-          <tr>
-              <td class="contacts__faild">
-                адрес:
-              </td>
-              <td class="contacts__value">
-                <a class="contacts__address" href="https://goo.gl/maps/f8RVnEJYgRJ2">
-                  г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-                </a>
-              </td>
-            </tr>
-        </table>
+            </p>
+          </div>
+          <div class="contacts__item contact">
+            <p class="contacts__field">
+              адрес:
+            </p>
+            <p class="contact__value">
+              <a class="contact__address" href="https://goo.gl/maps/f8RVnEJYgRJ2">
+                г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+              </a>
+            </p>
+          </div>
+        </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258688!2d30.320853352022112!3d59.9387164817872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1554369560427!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
         </iframe>
         <a class="reviews__message btn" href="feedback.html">Напишите нам</a>
@@ -161,7 +161,7 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="socials__item">
-            <a calss="socials__link social__link--intagram" href="https://www.instagram.com/htmlacademy">Мы в Instagram</a>
+            <a calss="socials__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Instagram</a>
           </li>
           <li class="socials__item">
             <a calss="socials__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в FB</a>
@@ -178,7 +178,7 @@
     </footer>
 
     <div class="modal">
-      <div class="modal__wrapp">
+      <div class="modal__wrap">
         <h3 class="modal__title">Добавить в корзину</h3>
         <p class="modal__text">Выберите размер:</p>
         <div class="modal__selector">
