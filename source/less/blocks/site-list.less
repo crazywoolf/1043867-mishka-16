@@ -1,0 +1,33 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px @color-nav-border;
+}
+
+.site-list__item {
+  .font-subtitle;
+  list-style-type: none;
+  font-weight: bold;
+  padding: 2em 2em;
+  border-bottom: solid 1px @color-nav-border;
+}
+
+.site-list__link {
+  color: @color-main-title;
+  text-decoration: none;
+}
+
+.site-list__icon {
+  display: block;
+  height: 1.6em;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+
+  &--search {
+    background-image: url("/img/icon-search.svg");
+  }
+
+  &--order {
+    background-image: url("/img/icon-cart.svg");
+  }
+}
