@@ -1,5 +1,15 @@
 .zigzag-line {
   background-image: url("/img/bg-zigzag-line.svg");
   background-size: auto 100%;
-  height: 0.5em;
+  height: 10px;
+
+  @media (min-width: @tablet-width) {
+    height: 20px;
+    margin: 50px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 30px;
+    margin: 70px 0;
+  }
 }

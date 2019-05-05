@@ -1,5 +1,12 @@
 .header {
   padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .header__slogan {
@@ -9,8 +16,22 @@
   background-size: cover;
   background-position: center;
   .font-page-title;
-  padding: 2.77777em 1.1111em 4.44444em;
+  height: 285px;
+  padding: 75px 30px 30px;
   color: @color-main-title;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    height: 630px;
+    padding: 165px 85px 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }
 
 .header__title {
@@ -18,15 +39,28 @@
   padding: 3em 1.11111em;
   background-color: @bg-color-footer;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__link {
   .font-title;
-  display: block;
-  padding: 1.0526em 1.57897em;
+  padding: 30px;
   color: @color-green-btn;
   text-decoration: none;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 
   &--left {
     background-color: @bg-color-left-green-btn;

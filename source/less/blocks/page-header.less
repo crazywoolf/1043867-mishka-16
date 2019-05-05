@@ -1,4 +1,31 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+  }
+}
+
 .page-header__logo {
-  padding: 1.3333em 2em;
-  display: block;
+  padding: 20px 30px;
+  display: flex;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    padding: 20px 0;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
 }

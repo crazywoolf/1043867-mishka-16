@@ -1,20 +1,38 @@
 .products {
-  padding: 1em 2em;
+  padding: 15px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 0;
+  }
 }
 
 .products__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .products__item {
   list-style-type: none;
-  padding-bottom: 2em;
-}
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 
-.products__description-box {
-  padding: 2em;
-  border: 1px solid @color-table-line;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    width: 315px;
+  }
 }
 
 .products__link {
@@ -24,35 +42,85 @@
   text-decoration: none;
   margin: 0;
 
+  &--img {
+    height: 200px;
+
+    @media (min-width: @tablet-width) {
+      width: 50%;
+      height: 334px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 460px;
+      width: 100%;
+    }
+  }
+
   &--title {
     font-weight: bold;
-    padding-bottom: 1em;
+    padding-bottom: 17px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.products__description-box {
+  box-sizing: border-box;
+  padding: 30px;
+  border: 1px solid @color-table-line;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    flex-grow: 1;
   }
 }
 
 .products__description {
-  font-size: 0.86667em;
-  padding-bottom: 2em;
+  font-size: 13px;
+  padding-bottom: 26px;
   margin: 0;
-  line-height: 2.30768;
+  line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .products__line {
   display: block;
   height: 1px;
   background-color: @color-table-line;
-  margin-bottom: 1.6em;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 }
 
 .products__price {
   font-weight: bold;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    .font-subtitle;
+  }
 }
 
 .products__icon {
   background-color: transparent;
-  height: 2em;
-  width: 2em;
+  height: 25px;
+  width: 25px;
   border: none;
   background-repeat: no-repeat;
   background-size: 100% 100%;

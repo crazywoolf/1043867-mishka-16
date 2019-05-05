@@ -1,5 +1,19 @@
 .page-footer {
   background-color: @bg-color-footer;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+  }
 }
 
 .page-footer__line {
@@ -7,4 +21,17 @@
   margin: 0 2em;
   height: 1px;
   background-color: @color-divder;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 30%;
+  }
 }
