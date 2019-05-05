@@ -45,12 +45,16 @@
             <legend class="form__legend">Тип</legend>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input radio" name="accessory" type="radio">Аксессуар для интерьера
+                  <input class="form__input radio" name="type" type="radio">
+                  <span class="radio__custom"></span>
+                  <span class="radio__label">Аксессуар для интерьера</span>
                 </label>
               </p>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input radio" name="toy" type="radio">Детская игрушка
+                  <input class="form__input radio" name="type" type="radio">
+                  <span class="radio__custom"></span>
+                  <span class="radio__label">Детская игрушка</span>
                 </label>
               </p>
           </fieldset>
@@ -58,32 +62,44 @@
             <legend class="form__legend">Цвет</legend>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input checkbox" name="colors[]" value="whight" type="checkbox">Белый
+                  <input class="form__input checkbox" name="colors[]" value="whight" type="checkbox">
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__label">Белый</span>
                 </label>
               </p>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input checkbox" name="colors[]" value="grey" type="checkbox">Серый
+                  <input class="form__input checkbox" name="colors[]" value="grey" type="checkbox">
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__label">Серый</span>
                 </label>
               </p>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input checkbox" name="colors[]" value="tiffany" type="checkbox">«Тиффани»
+                  <input class="form__input checkbox" name="colors[]" value="tiffany" type="checkbox">
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__label">«Тиффани»</span>
                 </label>
               </p>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input checkbox" name="colors[]" value="black" type="checkbox">Черный
+                  <input class="form__input checkbox" name="colors[]" value="black" type="checkbox">
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__label">Черный</span>
                 </label>
               </p>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input checkbox" name="colors[]" value="pink" type="checkbox">Розовый
+                  <input class="form__input checkbox" name="colors[]" value="pink" type="checkbox">
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__label">Розовый</span>
                 </label>
               </p>
               <p class="form__line">
                 <label class="form__label">
-                  <input class="form__input checkbox" name="colors[]" value="orange" type="checkbox">Оранжевый
+                  <input class="form__input checkbox" name="colors[]" value="orange" type="checkbox">
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__label">Оранжевый</span>
                 </label>
               </p>
           </fieldset>
@@ -107,19 +123,19 @@
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Телефон</legend>
-              <p class="form__line">
-                <input class="form__input tel" name="tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="(\+7\s?\d{3} \d{3} \d{2} \d{2})"><span class="text__icon text__icon--tel"></span>
+              <p class="form__line form__line--no-padding-top">
+                <input class="form__input tel text" name="tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="(\+7\s?\d{3} \d{3} \d{2} \d{2})"><span class="text__icon text__icon--tel"></span>
               </p>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">e-mail</legend>
-              <p class="form__line">
-                <input class="form__input email" name="email" type="email" placeholder="Ваш Email*"><span class="text__icon text__icon--email"></span>
+              <p class="form__line form__line--no-padding-top">
+                <input class="form__input email text" name="email" type="email" placeholder="Ваш Email*"><span class="text__icon text__icon--email"></span>
               </p>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">доп</legend>
-              <textarea class="form__input textarea" name="additionally" id="add" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="form__input textarea" name="additionally" id="add" cols="20" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <small class="form__input footnote">*Поля обязательны для заполнения</small>
           <button class="form__btn btn" type="submit" value="Отправить">Отправить</button>

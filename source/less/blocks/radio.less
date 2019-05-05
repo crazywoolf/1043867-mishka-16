@@ -1,3 +1,28 @@
 .radio {
-  font-size: 1em;
+  display: none;
+
+  &:checked + .radio__custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.5em;
+    top: 0.5em;
+    right: 0.5em;
+    bottom: 0.5em;
+    border-radius: 50%;
+    background-color: @color-accent-text;
+  }
+}
+
+.radio__custom {
+  display: inline-block;
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: 2px solid @color-main-title;
+  border-radius: 50%;
+}
+
+.radio__label {
+  display: inline-block;
 }
