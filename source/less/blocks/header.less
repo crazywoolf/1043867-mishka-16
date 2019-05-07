@@ -1,20 +1,25 @@
 .header {
-  padding-bottom: 1em;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
+  background-color: @bg-color-footer;
+
+  &--with-bg {
+    background-image: url("/img/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 170%;
+    background-position: top;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0 50px;
   }
 }
 
 .header__slogan {
   display: block;
-  background-image: url("/img/hero-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   .font-page-title;
   height: 285px;
   padding: 75px 30px 30px;
@@ -36,11 +41,14 @@
 
 .header__title {
   .font-page-title;
-  padding: 3em 1.11111em;
-  background-color: @bg-color-footer;
+  padding: 75px 30px;
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 105px 0;
+  }
 }
 
 .header__link {
