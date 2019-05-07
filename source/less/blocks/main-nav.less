@@ -1,12 +1,30 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+}
+
 .main-nav__toggle {
   background-color: transparent;
   border: none;
   color: transparent;
-  font-size: 0.2em;
-  height: 8em;
-  width: 8em;
+  height: 24px;
+  width: 24px;
   background-image: url("/img/icon-menu-close.svg");
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 100%;
   background-position: center;
+  margin: -52px 30px 28px auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

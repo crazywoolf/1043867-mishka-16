@@ -1,9 +1,47 @@
 .featured {
   .section;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0;
+    background-image: url("/img/triple-set-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 334px 422px;
+    background-position: right bottom;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 50% 100%;
+    padding-top: 60px;
+    width: 1050px;
+  }
+}
+
+.featured__title-wrap {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row-reverse;
+  }
 }
 
 .featured__title {
   .title;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+  }
 }
 
 .featured__subtitle {
@@ -11,37 +49,97 @@
   .font-subtitle;
   text-transform: uppercase;
   color: @color-accent-text;
-  padding-bottom: 1.7647em;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    width: 75px;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    padding: 0 50px;
+  }
 }
 
 .featured__description {
   margin: 0;
-  line-height: 1.6;
-  padding-bottom: 0.3333em;
+  line-height: 24px;
+  padding-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 290px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 180px;
+  }
 }
 
 .featured__details-list {
-  padding: 1em 0;
+  padding: 15px 0;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 180px;
+  }
 }
 
 .featured__line {
   border-bottom: solid 1px @color-table-line;
-  padding: 0.66666em 0;
+  padding: 10px 0;
   display: table;
-  line-height: 1.333333;
+  line-height: 20px;
+  width: 100%;
+}
+
+.featured__field {
+  width: 35%;
 }
 
 .featured__picture {
-  padding: 1em 0;
+  padding: 15px 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .featured__price {
   .font-subtitle;
   font-weight: bold;
   margin: 0;
-  padding: 0.88235em 0 1.7647em;
+  padding: 15px 0 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 290px;
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 180px;
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
 }
 
 .featured__order {
-  margin-bottom: 2em;
+  margin-bottom: 30px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 290px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 180px;
+  }
 }

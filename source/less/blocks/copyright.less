@@ -1,14 +1,28 @@
 .copyright {
-  padding: 1.6333em 2em;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 30%;
+    justify-content: flex-end;
+  }
 }
 
 .copyright__text {
   .font-title;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .copyright__link {
   display: block;
-  height: 2.334em;
+  height: 35px;
+  width: 30px;
+  margin-left: 30px;
   background-image: url("/img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
 }

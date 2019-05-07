@@ -2,6 +2,27 @@
   padding: 2em;
   border: solid 1px @border-color-modal;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
+}
+
+.modal__wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin: auto;
+  }
 }
 
 .modal__title {
@@ -18,6 +39,12 @@
 
 .modal__selector {
   padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__size {
+  width: 32%;
 }
 
 .modal__add {
