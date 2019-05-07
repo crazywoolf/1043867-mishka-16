@@ -10,15 +10,36 @@
     padding: 0 50px;
     box-sizing: border-box;
   }
+
+  @media (max-width: @only-mobile) {
+    &--opened .main-nav__toggle {
+      background-image: url("/img/icon-menu-close.svg");
+    }
+
+    &--closed .main-nav__toggle {
+      background-image: url("/img/icon-menu-open.svg");
+    }
+
+    &--closed .main-nav__list {
+      display: none;
+    }
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+
+    &--nojs .main-nav__list {
+      display: block;
+    }
+  }
 }
 
 .main-nav__toggle {
   background-color: transparent;
   border: none;
   color: transparent;
-  height: 24px;
-  width: 24px;
-  background-image: url("/img/icon-menu-close.svg");
+  height: 22px;
+  width: 22px;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
