@@ -1,18 +1,28 @@
 .slider {
-  font-size: 1em;
+  font-size: 15px;
 }
 
 .slider__toggles {
-  padding-bottom: 2.2em;
+  padding-bottom: 38px;
+  display: flex;
 }
 
 .slider__toggle {
   border: 1px solid @color-nav-border;
-  font-size: 1em;
-  height: 3.6em;
+  font-size: 15px;
+  height: 50px;
+  width: 130px;
+  margin: 0;
+  box-sizing: border-box;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 40%;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    width: 87px;
+    background-size: 56%;
+    border: none;
+  }
 
   &--prev {
     background-image: url("/img/icon-left-arrow.svg");
@@ -24,5 +34,5 @@
 }
 
 .reviews__message {
-  margin-bottom: 2em;
+  margin-bottom: 34px;
 }

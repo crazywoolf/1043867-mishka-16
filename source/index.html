@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -84,6 +85,7 @@
             <span class="link__label">Детские игрушки</span>
           <span class="link__icon link__icon--toy"></span>
         </a>
+        <div class="zigzag-line--fill"></div>
       </section>
 
       <section class="featured">
@@ -91,7 +93,7 @@
           <h3 class="featured__title">Вязаные корзинки</h3>
           <b class="featured__subtitle">Товар недели</b>
         </div>
-        <p class="featured__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <p class="featured__description">Экологически чистая пряжа,<br/>ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="featured__details-list">
           <tr class="featured__line">
             <td class="featured__field">
@@ -133,22 +135,52 @@
         <h3 class="about__title">Коротко о нас:</h3>
         <ul class="about__list">
           <li class="about__item">
-            <span class="about__icon about__icon--flower"></span>Экологически<br>чистые материалы
+            <span class="about__icon about__icon--flower">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 31.972 37.301">
+                <title id="heading">Иконка эко материалов</title>
+                <use xlink:href="#icon-feature-flower"></use>
+              </svg>
+            </span>Экологически<br>чистые материалы
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon--money"></span>Скандинавский стиль<br>по российской цене
+            <span class="about__icon about__icon--money">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 46 24">
+                <title id="heading">Иконка цены</title>
+                <use xlink:href="#icon-feature-money"></use>
+              </svg>
+            </span>Скандинавский стиль<br>по российской цене
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon--like"></span>Увеличивает лайки<br>на фотографиях
+            <span class="about__icon about__icon--like">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 28 16">
+                <title id="heading">Иконка сердца</title>
+                <use xlink:href="#icon-feature-heart"></use>
+              </svg>
+            </span>Увеличивает лайки<br>на фотографиях
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon--strings"></span>Связано вручную с<br>любовью и умилением
+            <span class="about__icon about__icon--strings">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 30 25">
+                <title id="heading">Иконка клубка</title>
+                <use xlink:href="#icon-feature-ball"></use>
+              </svg>
+            </span>Связано вручную с<br>любовью и умилением
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon--rocket"></span>Поддержка отечественного производителя
+            <span class="about__icon about__icon--rocket">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 54 23">
+                <title id="heading">Иконка ракеты</title>
+                <use xlink:href="#icon-feature-rocket"></use>
+              </svg>
+            </span>Поддержка отечественного производителя
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon--box"></span>Поставляется в<br>подарочной упаковке
+            <span class="about__icon about__icon--box">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 30 32">
+                <title id="heading">Иконка подарка</title>
+                <use xlink:href="#icon-feature-gift"></use>
+              </svg>
+            </span>Поставляется в<br>подарочной упаковке
           </li>
         </ul>
       </section>
@@ -173,8 +205,9 @@
           </div>
         </div>
         <a class="reviews__message btn" href="add-comment.html">Написать</a>
-        <div class="reviews__zigzag-line zigzag-line"></div>
       </section>
+
+      <div class="zigzag-line zigzag-line--second"></div>
 
       <section class="contacts">
         <h4 class="contacts__title">Контакты</h4>
@@ -190,19 +223,32 @@
             </p>
           </div>
           <div class="contacts__item contact">
-            <p class="contacts__field">
+            <p class="contact__field">
               адрес:
             </p>
             <p class="contact__value">
               <a class="contact__address" href="https://goo.gl/maps/f8RVnEJYgRJ2">
-                г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+                г. Санкт-Петербург,<br/>ул. Большая<br/>Конюшенная,<br/>д. 19/8, офис 101
               </a>
             </p>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258688!2d30.320853352022112!3d59.9387164817872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1554369560427!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
-        </iframe>
+        <div class="contact__map-wrap">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contact__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+          </picture>
+          <svg class="contact__pin" role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 66 100.801">
+            <title id="heading">Пин на карте</title>
+            <use xlink:href="#icon-map-pin"></use>
+          </svg>
+        </div>
         <a class="contacts__message btn" href="feedback.html">Напишите нам</a>
+        <svg class="contacts__flag" role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 46.68 81.691">
+          <title id="heading">Флаг</title>
+          <use xlink:href="#icon-flag"></use>
+        </svg>
       </section>
     </main>
 
@@ -213,20 +259,40 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 21.769 21.334">
+                <title id="heading">Перейти в instagram</title>
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"></a>
+            <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 14.962 27.718">
+                <title id="heading">Перейти в facebook</title>
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru"></a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">
+              <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 23.494 20.168">
+                <title id="heading">Перейти в twitter</title>
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
       <span class="page-footer__line"></span>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <svg role="img" aria-labelledby="heading" focusable="false" viewBox="0 0 27 34">
+            <title id="heading">Лого академии</title>
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
 

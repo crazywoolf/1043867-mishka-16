@@ -1,14 +1,16 @@
 .header {
+  position: relative;
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   background-color: @bg-color-footer;
 
   &--with-bg {
+    position: relative;
     background-image: url("/img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 170%;
-    background-position: top;
+    background-size: 178%;
+    background-position: -126px -19px;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("/img/hero-mobile@2x.jpg");
@@ -17,6 +19,7 @@
     @media (min-width: @tablet-width) {
       background-image: url("/img/hero-tablet@1x.jpg");
       background-size: auto 100%;
+      background-position: center;
     }
 
     @media (min-width: @tablet-width) and (min-resolution: 144dpi),
@@ -44,15 +47,15 @@
 .header__slogan {
   display: block;
   .font-page-title;
-  height: 285px;
-  padding: 75px 30px 30px;
+  height: 282px;
+  padding: 70px 30px 30px;
   color: @color-main-title;
   box-sizing: border-box;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    height: 630px;
-    padding: 165px 85px 30px;
+    height: 626px;
+    padding: 153px 85px 30px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -65,19 +68,24 @@
 
 .header__title {
   .font-page-title;
-  padding: 75px 30px;
+  padding: 71px 30px 75px;
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 105px 0;
+    padding: 96px 0 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 93px 0 105px;
   }
 }
 
 .header__link {
   .font-title;
-  padding: 30px;
+  padding: 24px 29px;
   color: @color-green-btn;
   text-decoration: none;
   font-weight: bold;
@@ -87,6 +95,7 @@
   @media (min-width: @tablet-width) {
     width: 50%;
     box-sizing: border-box;
+    padding: 29px 36px;
   }
 
   @media (min-width: @desktop-width) {

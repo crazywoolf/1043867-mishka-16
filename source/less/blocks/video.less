@@ -1,44 +1,133 @@
 .video {
-  .section;
-  display: none;
+  padding: 4px 30px 58px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 .video__wrapp {
   border: 1px solid @color-nav-border;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: wrap;
+    height: 455px;
+  }
+}
+
+.video__container {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }
 
 .video__title {
   .font-subtitle;
   margin: 0;
-  padding: 1.7647em;
+  padding: 23px 33px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding: 32px 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding: 43px 77px 33px;
+    width: 212px;
+  }
 }
 
 .video__icon {
-  background-image: url("/img/icon-video.svg");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
   display: block;
-  height: 2em;
+  height: 44px;
+  width: 48px;
+  padding-top: 6px;
+  margin-right: 24px;
+
+  @media (min-width: @tablet-width) {
+    height: 21px;
+    width: 31px;
+    padding-top: 0;
+    margin-right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 30px;
+    margin-right: auto;
+    margin-bottom: 23px;
+  }
+
+  svg {
+    fill: @color-accent-text;
+  }
 }
 
 .video__description {
-  font-size: 0.86667em;
-  line-height: 2.30768;
+  font-size: 13px;
+  line-height: 1.9;
   margin: 0;
-  padding: 2.30768em;
+  padding: 22px 34px 26px;
+
+  @media (min-width: @tablet-width) {
+    padding: 2px 39px 37px;
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 249px;
+    line-height: 2;
+    padding: 0 40px 46px 77px;
+  }
 }
 
 .video__button {
-  margin: 0 1.7647em 1.7647em;
+  margin: 0 33px 32px;
+  width: 192px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 41px 46px;
+    width: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 57px 0 78px;
+  }
 
   &--play {
+    position: absolute;
+    top: 37px;
+    left: 77px;
     margin: 0;
-    width: 10.819em;
-    height: 7.546em;
+    width: 97px;
+    height: 74px;
+    border-radius: 21px;
     background-image: url("/img/icon-play.svg");
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
     background-position: center;
+
+    @media (min-width: @tablet-width) {
+      left: 285px;
+      top: 188px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 292px;
+      top: 190px;
+    }
   }
 }

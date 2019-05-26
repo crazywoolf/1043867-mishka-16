@@ -26,7 +26,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("source/img/{icon-*,logo-htmlacademy}.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -60,6 +60,17 @@ gulp.task("css", function () {
     ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("normalize", function () {
+  return gulp.src("source/css/normalize.css")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(csso())
+    .pipe(rename("normalize.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -99,6 +110,7 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
+  "normalize",
   "css",
   "sprite",
   "html"

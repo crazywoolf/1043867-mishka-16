@@ -1,6 +1,24 @@
 .textarea {
-  .font-subtitle;
-  margin: 1em 0;
-  padding: 1em;
+  font-size: 17px;
+  line-height: 1.15;
+  margin: 5px 0;
+  padding: 12px 15px;
+  width: 226px;
   border: 2px solid @color-main-title;
+
+  &::placeholder {
+    color: @color-main-text;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 14px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 14px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
 }
