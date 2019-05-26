@@ -1,13 +1,73 @@
 .text {
   .font-subtitle;
   display: block;
-  line-height: 2.8em;
+  line-height: 2.5;
   border-right: none;
   border-top: none;
   border-left: none;
   border-bottom: 2px solid @color-main-title;
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 24px;
+    padding-left: 17px;
+  }
 
   &::placeholder {
-    color: @color-nav-border;
+    color: @color-main-text;
+    opacity: 0.3;
+  }
+
+  &--email {
+    margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+      background-color: @bg-color-footer;
+    }
+  }
+
+  &--tel {
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+      background-color: @bg-color-footer;
+    }
+  }
+}
+
+.text__icon {
+  width: 24px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  right: 9px;
+  bottom: 21px;
+  opacity: 0.2;
+
+  @media (min-width: @tablet-width) {
+    right: 26px;
+    bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 9px;
+    bottom: 32px;
+  }
+
+  &--email {
+    width: 33px;
+    bottom: 20px;
+    right: 3px;
+
+    @media (min-width: @tablet-width) {
+      right: 21px;
+      bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 4px;
+    }
   }
 }

@@ -1,9 +1,14 @@
 .about {
-  padding: 15px 30px;
+  padding: 27px 30px 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px 18px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 25px;
     width: 700px;
     margin: 0 auto;
   }
@@ -11,10 +16,10 @@
 
 .about__title {
   .title;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 }
 
@@ -25,53 +30,35 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    height: 490px;
   }
 }
 
 .about__item {
   .font-subtitle;
+  line-height: 18px;
   color: @color-main-title;
   font-weight: bold;
   list-style-type: none;
-  padding: 17px 0;
+  padding: 18px 0 13px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
     font-size: 20px;
+    padding: 16px 0 48px;
   }
 }
 
 .about__icon {
-  display: block;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  height: 37px;
   width: 50px;
-  margin-bottom: 17px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  margin-bottom: 19px;
   fill: @color-accent-text;
 
-  &--flower {
-    background-image: url("/img/icon-feature-flower.svg");
-  }
-
-  &--money {
-    background-image: url("/img/icon-feature-money.svg");
-  }
-
-  &--like {
-    background-image: url("/img/icon-feature-heart.svg");
-    background-size: 100% 75%;
-  }
-
-  &--strings {
-    background-image: url("/img/icon-feature-ball.svg");
-  }
-
-  &--rocket {
-    background-image: url("/img/icon-feature-rocket.svg");
-  }
-
-  &--box {
-    background-image: url("/img/icon-feature-gift.svg");
+  svg {
+    height: 100%;
   }
 }

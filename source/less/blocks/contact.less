@@ -1,16 +1,63 @@
 .contact__email {
   margin: 0;
   color: currentColor;
-  text-decoration-color: @color-accent-text;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #63d1bb;
+  }
 }
 
 .contact__address {
   margin: 0;
   text-decoration: none;
   color: currentColor;
+
+  @media (min-width: @tablet-width) {
+    br:nth-child(2) {
+      display: none;
+    }
+  }
 }
 
 .contact__field,
 .contact__value {
   margin: 0;
+}
+
+.contact__value {
+  padding-left: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 24px;
+  }
+}
+
+.contact__map-wrap {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    margin-left: auto;
+  }
+}
+
+.contact__pin {
+  position: absolute;
+  width: 65px;
+  top: 144px;
+  left: 139px;
+
+  @media (min-width: @tablet-width) {
+    top: 139px;
+    left: 364px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 147px;
+    left: 239px;
+  }
 }
