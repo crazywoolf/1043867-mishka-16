@@ -14,6 +14,20 @@
 .copyright__text {
   .font-title;
 
+  .copyright:focus &,
+  .copyright:active & {
+    opacity: 0.3;
+  }
+
+  svg {
+    height: 100%;
+  }
+
+  &--fb {
+    height: 29px;
+    transform: translate(5px, -5px);
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 19px;
   }
@@ -25,6 +39,15 @@
   width: 25px;
   margin-left: 30px;
   fill: @color-accent-text;
+
+  .copyright:hover & {
+    fill: @color-logo-dark;
+  }
+
+  .copyright:focus &,
+  .copyright:active & {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 26px;

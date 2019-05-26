@@ -28,6 +28,15 @@
   display: flex;
   flex-direction: column;
 
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(@color-main-title, 0.1);
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(@color-main-title, 0.1);
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
     flex-direction: row;
@@ -63,6 +72,15 @@
   &--title {
     font-weight: bold;
     padding-bottom: 4px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -123,15 +141,29 @@
 }
 
 .products__icon {
+  display: block;
   background-color: transparent;
+  padding: 0;
   height: 17px;
   width: 19px;
   border: none;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   opacity: 0.2;
 
-  &--order {
-    background-image: url("/img/icon-cart.svg");
+  &:hover {
+    opacity: 1;
+
+    svg {
+      fill: @color-accent-text;
+    }
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+    outline: none;
+
+    svg {
+      fill: @color-accent-text;
+    }
   }
 }

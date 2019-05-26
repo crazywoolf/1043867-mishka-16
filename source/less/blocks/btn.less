@@ -11,9 +11,35 @@
   text-decoration: none;
   text-align: center;
 
+  &:hover {
+    background-color: @color-main-text;
+    color: @color-main-bg;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: @color-main-text;
+    color: rgba(@color-main-bg, 0.3);
+  }
+
   &--add {
     background-color: @bg-color-btn;
     border-color: @bg-color-btn;
     color: @color-green-btn;
+
+    &:hover {
+      background-color: @bg-color-btn;
+      border-color: @bg-color-btn;
+      color: @color-green-btn;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: @bg-color-btn;
+      border-color: @bg-color-btn;
+      color: @color-green-btn;
+    }
   }
 }

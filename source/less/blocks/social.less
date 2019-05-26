@@ -36,6 +36,21 @@
     height: 20px;
   }
 
+  &:hover {
+    svg {
+      fill: @color-accent-text;
+    }
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: @color-accent-text;
+    }
+  }
+
   svg {
     height: 100%;
   }

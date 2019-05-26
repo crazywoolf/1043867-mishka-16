@@ -26,7 +26,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/{icon-*,logo-htmlacademy}.svg")
+  return gulp.src("source/img/{icon-*,logo-htmlacademy,logo-footer}.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))

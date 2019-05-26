@@ -10,6 +10,13 @@
   width: 100%;
   box-sizing: border-box;
 
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @color-accent-text;
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 24px;
     padding-left: 17px;
@@ -45,6 +52,16 @@
   right: 9px;
   bottom: 21px;
   opacity: 0.2;
+
+  .form__line:hover &,
+  .form__line:hover:focus &,
+  .form__line:hover:active & {
+    opacity: 1;
+
+    svg {
+      fill: @color-accent-text;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     right: 26px;

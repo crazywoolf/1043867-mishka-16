@@ -134,7 +134,7 @@
     .site-list__icon {
       opacity: 1;
 
-      path {
+      svg {
         fill: @color-accent-text;
       }
     }
@@ -149,7 +149,7 @@
     .site-list__icon {
       opacity: 0.3;
 
-      path {
+      svg {
         fill: @color-accent-text;
       }
     }
@@ -168,15 +168,15 @@
 }
 
 .site-list__icon {
-  height: 25px;
-  width: 25px;
+  display: block;
+  height: 26px;
+  width: 19px;
   margin-right: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
   opacity: 0.2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  svg {
+    fill: @color-main-title;
+  }
 
   @media (min-width: @tablet-width) {
     margin-right: 29px;
