@@ -65,17 +65,6 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("normalize", function () {
-  return gulp.src("source/css/normalize.css")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(csso())
-    .pipe(rename("normalize.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
-
 gulp.task("server", function () {
   server.init({
     server: "build/"
@@ -110,7 +99,6 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "normalize",
   "css",
   "sprite",
   "html"
