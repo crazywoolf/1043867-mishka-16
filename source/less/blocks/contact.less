@@ -3,6 +3,19 @@
   color: currentColor;
   text-decoration: none;
 
+  &:hover {
+    color: @color-accent-text;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
   &::after {
     content: "";
     display: block;

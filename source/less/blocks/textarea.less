@@ -6,6 +6,13 @@
   width: 226px;
   border: 2px solid @color-main-title;
 
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @color-accent-text;
+    outline: none;
+  }
+
   &::placeholder {
     color: @color-main-text;
     opacity: 0.3;

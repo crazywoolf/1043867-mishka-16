@@ -24,6 +24,15 @@
   position: relative;
   z-index: 10;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 0;
     padding: 21px 0;

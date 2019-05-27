@@ -1,3 +1,10 @@
+.link {
+  &:hover {
+    transform-origin: bottom;
+    transform: scaleY(1.05);
+  }
+}
+
 .link__icon {
   display: block;
   background-repeat: no-repeat;
@@ -5,7 +12,16 @@
   background-position: center;
   height: 55px;
   width: 55px;
-  opacity: 0.2;
+  opacity: 0.5;
+
+  .header__link:hover & {
+    opacity: 0.7;
+  }
+
+  .header__link:focus &,
+  .header__link:active & {
+    opacity: 0.3;
+  }
 
   &--interior {
     background-image: url("/img/icon-interior.svg");
@@ -18,4 +34,9 @@
 
 .link__label {
   width: 120px;
+
+  .header__link:focus &,
+  .header__link:active & {
+    opacity: 0.3;
+  }
 }

@@ -33,6 +33,15 @@
   margin-bottom: 7px;
   border: 2px solid @color-main-title;
 
+  .form__label:hover & {
+    border-color: @color-accent-text;
+  }
+
+  .form__label:hover:focus &,
+  .form__label:hover:active & {
+    border-color: rgba(@color-main-title, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     width: 50px;
     height: 50px;
