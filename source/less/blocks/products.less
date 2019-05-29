@@ -32,7 +32,7 @@
 
 .products__item {
   list-style-type: none;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -97,19 +97,20 @@
 .products__description-box {
   box-sizing: border-box;
   border: 1px solid @color-table-line;
-  padding: 27px;
+  padding: 27px 27px 32px 27px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    padding: 27px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
     flex-grow: 1;
-    padding: 27px 33px 27px 27px;
+    padding: 27px 33px 28px 27px;
   }
 }
 
