@@ -1,8 +1,8 @@
 .about {
-  padding: 27px 30px 22px;
+  padding: 27px calc((100vw - 260px) / 2) 22px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 50px 18px;
+    padding: 0 calc((100vw - 668px) / 2) 18px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,7 +46,8 @@
   @media (min-width: @tablet-width) {
     width: 50%;
     font-size: 20px;
-    padding: 16px 0 48px;
+    line-height: 22px;
+    padding: 16px 0 39px;
   }
 }
 
@@ -60,5 +61,9 @@
 
   svg {
     height: 100%;
+  }
+
+  &--box {
+    width: 40px;
   }
 }

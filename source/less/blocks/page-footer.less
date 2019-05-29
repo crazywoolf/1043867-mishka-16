@@ -1,19 +1,17 @@
 .page-footer {
   background-color: @bg-color-footer;
-  width: 320px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 768px;
-    padding: 50px 50px 60px;
+    padding: 50px calc((100vw - 668px) / 2) 60px;
     box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1150px;
+    padding: 50px calc((100vw - 1050px) / 2) 60px;
   }
 }
 

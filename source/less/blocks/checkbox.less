@@ -1,4 +1,9 @@
 .checkbox {
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.checkbox__input {
   display: none;
 
   &:checked + .checkbox__custom::before {
@@ -27,10 +32,9 @@
   display: inline-block;
   position: relative;
   width: 35px;
-  height: 35px;
+  height: 36px;
   flex-shrink: 0;
   margin-right: 24px;
-  margin-bottom: 7px;
   border: 2px solid @color-main-title;
 
   .form__label:hover & {
@@ -56,9 +60,6 @@
 
 .checkbox__label {
   display: inline-block;
-  line-height: 2.5;
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 11px;
-  }
+  line-height: 18px;
+  color: @color-main-title;
 }

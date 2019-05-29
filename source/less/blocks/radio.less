@@ -1,4 +1,4 @@
-.radio {
+.radio__input {
   display: none;
 
   &:checked + .radio__custom::before {
@@ -33,7 +33,7 @@
 
   @media (min-width: @tablet-width) {
     width: 45px;
-    height: 45px;
+    height: 46px;
     margin-right: 30px;
   }
 
@@ -48,9 +48,9 @@
 }
 
 .radio__label {
-  display: inline-block;
+  color: @color-main-title;
   line-height: 1.2;
-  padding-top: 6px;
+  padding-top: 7px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;

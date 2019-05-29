@@ -1,13 +1,14 @@
 .video {
-  padding: 4px 30px 58px;
+  padding: 4px calc((100vw - 260px) / 2) 58px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 50px;
+    padding: 0 calc((100vw - 668px) / 2);
     margin-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 105px;
+    padding: 0 calc((100vw - 1050px) / 2);
   }
 }
 
@@ -47,6 +48,7 @@
   margin: 0;
   padding: 23px 33px;
   display: flex;
+  color: @color-main-title;
 
   @media (min-width: @tablet-width) {
     padding: 32px 41px;
@@ -102,19 +104,9 @@
   }
 }
 
-.video__button {
+.video__order {
   margin: 0 33px 32px;
   width: 192px;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  &:focus,
-  &:active {
-    transform: scale(0.8);
-    outline: none;
-  }
 
   @media (min-width: @tablet-width) {
     margin: 0 41px 46px;
@@ -124,7 +116,9 @@
   @media (min-width: @desktop-width) {
     margin: 0 57px 0 78px;
   }
+}
 
+.video__button {
   &--play {
     position: absolute;
     top: 37px;
@@ -138,6 +132,16 @@
     background-size: contain;
     border: none;
     background-position: center;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus,
+    &:active {
+      transform: scale(0.8);
+      outline: none;
+    }
 
     @media (min-width: @tablet-width) {
       left: 285px;

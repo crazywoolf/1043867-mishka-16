@@ -5,12 +5,33 @@
   flex-direction: column;
   background-color: @bg-color-footer;
 
+  &::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("/img/bg-zigzag-fill.svg");
+    background-size: auto 227%;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 16px;
+      background-position-x: 25px;
+    }
+  }
+
   &--with-bg {
     position: relative;
     background-image: url("/img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: 178%;
-    background-position: -126px -19px;
+    background-position: center -10px;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("/img/hero-mobile@2x.jpg");
@@ -29,6 +50,7 @@
 
     @media (min-width: @desktop-width) {
       background-image: url("/img/hero-desktop@1x.jpg");
+      background-size: 100% auto;
     }
 
     @media (min-width: @desktop-width) and (min-resolution: 144dpi),
@@ -40,7 +62,11 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 50px;
+    padding: 0 calc((100vw - 668px) / 2);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 calc((100vw - 1050px) / 2);
   }
 }
 
@@ -48,10 +74,11 @@
   display: block;
   .font-page-title;
   height: 282px;
-  padding: 70px 30px 30px;
+  padding: 70px calc((100vw - 260px) / 2) 30px;
   color: @color-main-title;
   box-sizing: border-box;
   text-align: center;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     height: 626px;
@@ -73,6 +100,7 @@
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+  color: @color-main-title;
 
   @media (min-width: @tablet-width) {
     padding: 96px 0 79px;
@@ -84,18 +112,65 @@
 }
 
 .header__link {
+  position: relative;
+  height: 56px;
   .font-title;
-  padding: 24px 29px;
+  padding: 24px calc((100vw - 260px) / 2);
   color: @color-green-btn;
   text-decoration: none;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
 
+  &::after {
+    content: "";
+    position: absolute;
+    right: calc((100vw - 260px) / 2);
+    top: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    height: 55px;
+    width: 55px;
+    opacity: 0.5;
+  }
+
+  &--left {
+    background-color: @bg-color-left-green-btn;
+
+    &::after {
+      background-image: url("/img/icon-interior.svg");
+      height: 60px;
+
+      @media (min-width: @tablet-width) {
+        height: 63px;
+        right: 29px;
+        top: 30px;
+      }
+    }
+  }
+
+  &--right {
+    background-color: @bg-color-right-green-btn;
+
+    &::after {
+      background-image: url("/img/icon-toy.svg");
+
+      @media (min-width: @tablet-width) {
+        height: 63px;
+        width: 60px;
+        right: 33px;
+        top: 30px;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 50%;
     box-sizing: border-box;
     padding: 29px 36px;
+    height: 118px;
   }
 
   @media (min-width: @desktop-width) {
@@ -103,11 +178,16 @@
     padding-right: 35px;
   }
 
-  &--left {
-    background-color: @bg-color-left-green-btn;
+  &:hover {
+    &::after {
+      opacity: 0.7;
+    }
   }
 
-  &--right {
-    background-color: @bg-color-right-green-btn;
+  &:focus,
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
   }
 }

@@ -1,7 +1,13 @@
 .text {
-  .font-subtitle;
+  @media (min-width: @tablet-width) {
+    padding: 2px 0;
+  }
+}
+
+.text__input {
+  font-size: 17px;
   display: block;
-  line-height: 2.5;
+  line-height: 18px;
   border-right: none;
   border-top: none;
   border-left: none;
@@ -9,6 +15,7 @@
   margin-bottom: 5px;
   width: 100%;
   box-sizing: border-box;
+  padding: 14px 0;
 
   &:hover,
   &:focus,
@@ -19,12 +26,21 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 24px;
+    margin-bottom: 0;
     padding-left: 17px;
+    font-size: 19px;
   }
 
   &::placeholder {
     color: @color-main-text;
+    font-size: 17px;
+    line-height: 18px;
     opacity: 0.3;
+    font-family: "opensans", "Verdana", "Arial", sans-serif;
+
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
   }
 
   &--email {
@@ -40,6 +56,10 @@
     @media (min-width: @tablet-width) {
       margin-left: 0;
       background-color: @bg-color-footer;
+    }
+
+    &::placeholder {
+      font-size: 19px;
     }
   }
 }
@@ -65,12 +85,11 @@
 
   @media (min-width: @tablet-width) {
     right: 26px;
-    bottom: 30px;
+    bottom: 13px;
   }
 
   @media (min-width: @desktop-width) {
     right: 9px;
-    bottom: 32px;
   }
 
   &--email {

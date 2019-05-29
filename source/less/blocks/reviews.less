@@ -1,9 +1,9 @@
 .reviews {
-  padding: 21px 30px 11px;
+  padding: 21px calc((100vw - 260px) / 2) 11px;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 76px 50px 12px;
+    padding: 76px calc((100vw - 668px) / 2) 12px;
     background-image: url("/img/review@1x.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -14,10 +14,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 50px;
-    padding-top: 71px;
-    padding-left: 176px;
-    padding-bottom: 65px;
+    width: 1050px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 71px 0 65px 176px;
   }
 }
 
@@ -45,8 +45,12 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 50px;
+    right: calc((100vw - 668px) / 2);
     top: 79px;
     width: 147px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 0;
   }
 }

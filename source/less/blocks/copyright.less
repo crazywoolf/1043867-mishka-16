@@ -7,12 +7,17 @@
     padding: 0;
     width: 30%;
     justify-content: flex-end;
-    height: 26px;
+    height: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 27px;
   }
 }
 
 .copyright__text {
   .font-title;
+  color: @color-main-title;
 
   .copyright:focus &,
   .copyright:active & {
@@ -50,6 +55,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 26px;
+    margin-left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 32px;
   }
 }

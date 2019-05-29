@@ -1,13 +1,23 @@
 .form {
-  padding: 6px 30px 30px;
+  padding: 6px calc((100vw - 260px) / 2) 30px;
 
   @media (min-width: @tablet-width) {
     padding: 56px 0 27px;
   }
 }
 
+.form__title {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
 .form__wrap {
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -22,11 +32,40 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    padding: 0 50px 6px;
+    padding: 0 calc((100vw - 668px) / 2) 6px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 47px 225px 6px;
+    padding: 47px calc((100vw - 1150px) / 2 + 225px) 6px;
+  }
+}
+
+.form__box {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    width: 668px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+  }
+}
+
+.form__input-set {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -43,21 +82,11 @@
   margin: 0 0 21px;
   padding: 0;
 
-  &:nth-child(7) {
-    margin-bottom: 3px;
+  &:nth-child(3) {
+    margin-bottom: 12px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 7px;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    border: none;
-    padding: 36px 50px 41px 218px;
-    margin-bottom: 0;
-
-    &:nth-child(3) {
-      padding-left: 200px;
+      padding-left: calc((100vw - 768px) / 2 + 200px);
 
       .form__line {
         display: inline-block;
@@ -66,21 +95,71 @@
       }
     }
 
+    @media (min-width: @desktop-width) {
+      padding-left: calc((100vw - 1150px) / 2 + 226px);
+      padding-right: calc((100vw - 1150px) / 2 + 190px);
+
+      .form__line {
+        width: 210px;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    margin-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 2px;
+
+      .form__legend {
+        top: 55px;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    margin-bottom: 16px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+      padding-top: 43px;
+      padding-bottom: 0;
+    }
+  }
+
+  &:nth-child(7) {
+    margin-bottom: 3px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 8px;
+
+      .form__legend {
+        top: 64px;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 36px calc((100vw - 668px) / 2) 39px calc((100vw - 768px) / 2 + 218px);
+    margin-bottom: 0;
+
+    &:nth-child(4) {
+      padding-bottom: 30px;
+    }
+
     &:nth-child(3),
     &:nth-child(5),
     &:nth-child(6) {
       background-color: @bg-color-footer;
     }
 
-    &:nth-child(5) {
-      padding-bottom: 0;
-    }
-
     &:nth-child(6) {
-      padding-top: 0;
+      padding-top: 15px;
+      padding-bottom: 41px;
 
       .form__legend {
-        top: 18px;
+        top: 35px;
       }
 
       .form__line {
@@ -88,28 +167,21 @@
         padding-bottom: 8px;
       }
     }
-
-    &:nth-child(4) {
-      padding-bottom: 30px;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 226px;
-
-    &:nth-child(3) {
-      padding-left: 226px;
-    }
+    padding-left: calc((100vw - 1150px) / 2 + 226px);
 
     &:nth-child(4),
     &:nth-child(5),
     &:nth-child(6),
     &:nth-child(7) {
-      padding-right: 225px;
+      padding-right: calc((100vw - 1150px) / 2 + 225px);
     }
 
     &:nth-child(7) {
       margin-bottom: 0;
+      padding-bottom: 43px;
     }
   }
 }
@@ -128,12 +200,12 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 61px;
-    left: 50px;
+    left: calc((100vw - 668px) / 2);
     font-size: 17px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 112px;
+    left: calc((100vw - 1150px) / 2 + 112px);
   }
 }
 
@@ -153,11 +225,7 @@
 
   @media (min-width: @tablet-width) {
     width: 230px;
-    margin-left: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 225px;
+    margin-bottom: 0;
   }
 }
 
@@ -175,7 +243,8 @@
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
-      margin-top: -5px;
+      margin-bottom: 16px;
+      line-height: 18px;
     }
   }
 }
